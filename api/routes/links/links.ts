@@ -27,6 +27,7 @@ linksRouter.post('/', async (req, res) => {
 
             await newLink.save();
             res.status(201).json({
+                id: newLink._id,
                 shortUrl,
                 originalUrl: url,
             });
